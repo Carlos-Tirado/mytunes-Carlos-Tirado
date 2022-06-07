@@ -4,8 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  
+
   <title>Music Search</title>
+
 </head>
+
 <body>
+  <div class="container">
+  <header>
+  <h1>Really Awesome Music Site<h1>
+  </header>
+  
+    <!--<div id="songplaying"></div>-->
+      <audio controls>
+      <source src="" alt="" id="songplaying"/> 
+      </audio> 
+
+      <section class="search">
+        <form class="search-form">
+          <input type="text" placeholder="Search for Artist" id="artistSearch">
+          <button type="button" name="button" id="searchButton">Search</button>
+        </form>
+      </section>
+
+      <div id="results">
+        <!-- Results of Search show up here -->
+      </div>
+
+
+  </div>
 </body>
-</html>
+</html> 
+
+
+
+
+
