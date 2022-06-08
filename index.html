@@ -11,16 +11,17 @@
 
 </head>
 
+
+
+
 <body>
   <div class="container">
   <header>
   <h1>Really Awesome Music Site<h1>
   </header>
     <!-- music player-->
-    <div id="songplaying"></div>
-      <audio controls>
-      <source src="" alt="" id="songplaying"/> 
-      </audio>
+    <div id="player"></div>
+      <audio controls id="songplaying"></audio>
 
     
       <!-- search area -->
@@ -31,14 +32,22 @@
         </form>
       </section>
 
-      <div id="showresults">
+      <section>
+        <p id="searchTitle">Search Results:</p>
+      </section>
+
+      <div id="showresults" class="box">
         <!-- Results of Search show up here -->
+    
+
       </div>
 
 
   </div>
 </body>
-</html> 
+
+
+</html>
 
 
 

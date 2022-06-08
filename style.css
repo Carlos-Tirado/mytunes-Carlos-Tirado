@@ -1,5 +1,39 @@
-#mytunes {
-    border: 5px solid darkblue;
-}*/
+#showresults{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+body {
+    
+    background-color: hsl(153, 52%, 64%);
+    color: #393939;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+audio {
+    background-color: #d28d8d;
+    border: 2px solid #888888;
+    font-size: 2vw;
+    margin: 0 10px 2vw;
+    width: 70%;
+}
+
+
+/*under the search button*/
+#searchTitle {
+    font-size: 1vw;
+    text-align: center;
+    width: 100%;
+}
+
+input {
+    border: 1px solid #a5a5a5;
+    font-size: 1vw;
+    margin: 0 5px;
+    padding: .5vw;
+    width: 30%;
+}
+
 
 
