@@ -26,6 +26,13 @@ button.addEventListener("click", function(event){ //we're giving click event lis
         .then(data => {
             console.log(data.results)
             previewSong(data.results)
+            //setting conditional to zero results
+            if (data.results.length === 0) {
+                let noResultsElement = document.createElement("div")
+                noResultsElement.classList.add("noResults")
+                noResultsElement.innerText = "Sorry, no results. =("
+                results.appendChild(noResultsElement)
+            }
         })
         .catch(err => {
         console.error(err);
@@ -36,6 +43,7 @@ button.addEventListener("click", function(event){ //we're giving click event lis
 
 
 function previewSong(searchData){
+    results.innerHTML = ""
     for (let song of searchData){
     let songName = song.trackName;
     let artistName = song.artistName;
@@ -48,6 +56,7 @@ function previewSong(searchData){
 
     let imageAlbum = document.createElement("img")
     //how to give style to the image?
+    imageAlbum.classList.add("imgAlbum")
     imageAlbum.src = song.artworkUrl100
     songcontainer.appendChild(imageAlbum)
 
@@ -55,24 +64,30 @@ function previewSong(searchData){
 
     let newSong = document.createElement('div');
     //how to give style to the text?
+    newSong.classList.add("nameSongBand")
     newSong.innerText = `${songName} By ${artistName}`;
     songcontainer.appendChild(newSong)
 
 
     // adding event click listener to the image, getting audio source to play audio after click
     imageAlbum.addEventListener("click", function(event){ 
-        console.log(source)
+    console.log(source)
 
 
 // ------ things to achieve CLEARING results? ---------------
 
 
     //we created-built a source element and append the audiotag so we can listen the songs
+    audio.innerHTML = ""
+    let audiotag = document.createElement("audio")
+    audiotag.controls = true //adding control to audiotag from line 82 (I used to have controlaudio on HTML)
     let sourceElement = document.createElement('source')
     sourceElement.src = source
-    audio.appendChild(sourceElement)
+    audiotag.appendChild(sourceElement)
+    audio.appendChild(audiotag)
+    console.log(audio)
 
-    audio.autoplay = true
+    audiotag.autoplay = true
 
     })
     results.appendChild(songcontainer) //closing container

@@ -1,11 +1,12 @@
-#showresults{
+#showresults {
     display: grid;
     grid-template-columns: auto auto auto;
+    
 }
 
 body {
     
-    background-color: hsl(153, 52%, 64%);
+    background-color: hsl(153, 53%, 77%);
     color: #393939;
     font-family: sans-serif;
     text-align: center;
@@ -36,4 +37,11 @@ input {
 }
 
 
+.imgAlbum {
+    width: 100px;
+}
 
+.nameSongBand {
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
